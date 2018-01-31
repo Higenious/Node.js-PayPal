@@ -8,8 +8,8 @@ app.use(express.static(__dirname +'/Client'));
 
 paypal.configure({
     'mode': 'sandbox', //sandbox or live
-    'client_id': 'Enter ID',
-    'client_secret': 'Enter ID'
+    'client_id': 'AQfJnT9BaqXMoPFtYXQrn3X-SNHNaOrPyUBNhuSMg_fQFgPzxZIpBrHEpeOK2DWULo71KqZSj8ZIIokA',
+    'client_secret': 'EKV83oP_oixg2I3m2AQnsmmVv_14fYCNeZrl3_IZT-fctXOq4PTAuQTYGiJ5_x5gvbPfDjGxbReMWeTA'
   });
 
 
@@ -90,6 +90,9 @@ app.get('/cancel', function(req, res){
     res.send('cancelled');
 });
 
-app.listen(3000,  function() {
-    console.log('server started On 3000');
+app.set('port', (process.env.PORT || 3000));
+
+app.listen(app.get('port'), function () {
+    console.log('Server Started on Port ' +app.get('port'));
+
 });
