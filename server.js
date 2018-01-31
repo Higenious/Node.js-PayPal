@@ -8,8 +8,8 @@ app.use(express.static(__dirname +'/Client'));
 
 paypal.configure({
     'mode': 'sandbox', //sandbox or live
-    'client_id': 'AQfJnT9BaqXMoPFtYXQrn3X-SNHNaOrPyUBNhuSMg_fQFgPzxZIpBrHEpeOK2DWULo71KqZSj8ZIIokA',
-    'client_secret': 'EKV83oP_oixg2I3m2AQnsmmVv_14fYCNeZrl3_IZT-fctXOq4PTAuQTYGiJ5_x5gvbPfDjGxbReMWeTA'
+    'client_id': '',
+    'client_secret': ''
   });
 
 
